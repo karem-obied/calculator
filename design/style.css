@@ -1,0 +1,290 @@
+:root {
+  /* Theme One */
+  /* background */
+  --Very-dark-desaturated-blue-main-background: hsl(222, 26%, 31%);
+  --Very-dark-desaturated-blue-toggle-background-keypad-background: hsl(
+    223,
+    31%,
+    20%
+  );
+  --Very-dark-desaturated-blue-screen-background: hsl(224, 36%, 15%);
+  /* keys */
+  --Desaturated-dark-blue-key-background: hsl(225, 21%, 49%);
+  --Desaturated-dark-blue-key-shadow: hsl(224, 28%, 35%);
+
+  --Red-key-background-toggle: hsl(6, 63%, 50%);
+  --Dark-red-key-shadow: hsl(6, 70%, 34%);
+
+  --Light-grayish-orange-key-background: hsl(30, 25%, 89%);
+  --Grayish-orange-key-shadow: hsl(28, 16%, 65%);
+  /* text */
+  --Very-dark-grayish-blue: hsl(221, 14%, 31%);
+  --White: hsl(0, 0, 100%);
+  /* Theme Two*/
+  /* background */
+  --Light-gray-main-background: hsl(0, 0%, 90%);
+  --Grayish-red-toggle-background-keypad-background: hsl(0, 5%, 81%);
+  --Very-light-gray-screen-background: hsl(0, 0%, 93%);
+  /* keys */
+  --Dark-moderate-cyan-key-background: hsl(185, 42%, 37%);
+  --Very-dark-cyan-key-shadow: hsl(185, 58%, 25%);
+  --Orange-key-background-toggle: hsl(25, 98%, 40%);
+  --Dark-orange-key-shadow: hsl(25, 99%, 27%);
+  --Light-grayish-yellow-key-background: hsl(45, 7%, 89%);
+  --Dark-grayish-orange-key-shadow: hsl(35, 11%, 61%);
+  /* text */
+  --Very-dark-grayish-yellow: hsl(60, 10%, 19%);
+  /* End Theme Two*/
+  /* theme three */
+  /* background */
+  --Very-dark-violet-main-background: hsl(268, 75%, 9%);
+  --Very-dark-violet-toggle-background-keypad-background-screen-background: hsl(
+    268,
+    71%,
+    12%
+  );
+  /* keys */
+  --Dark-violet-key-background: hsl(281, 89%, 26%);
+  --Vivid-magenta-key-shadow: hsl(285, 91%, 52%);
+  --Pure-cyan-key-background-toggle: hsl(176, 100%, 44%);
+  --Soft-cyan-key-shadow: hsl(177, 92%, 70%);
+  --Very-dark-violet-key-background: hsl(268, 47%, 21%);
+  --Dark-magenta-key-shadow: hsl(290, 70%, 36%);
+  /* text */
+  --Light-yellow: hsl(52, 100%, 62%);
+  --Very-dark-blue: hsl(198, 20%, 13%);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  user-select: none;
+  font-family: "Spartan", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+  min-height: 100vh;
+}
+.calculator {
+  width: 500px;
+  padding: 20px;
+}
+.up {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  padding: 10px;
+}
+.up .themer {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 60px;
+}
+.up span {
+  display: flex;
+  justify-content: space-between;
+}
+.up button {
+  padding: 10px;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 10px;
+  border: none;
+  position: relative;
+}
+.up button span {
+  transition: 0.5s;
+  position: absolute;
+  content: "";
+  left: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+form input {
+  font-size: 32px;
+  border: none;
+  width: 100%;
+  height: 100px;
+  border-radius: 6px;
+  padding: 20px;
+  direction: rtl;
+  margin-bottom: 10px;
+}
+.bottom form div {
+  max-width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.bottom span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  flex-basis: 22%;
+  padding: 5px 0;
+  border-radius: 6px;
+  text-align: center;
+  margin: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+.reset {
+  flex: 1;
+  font-size: 25px !important;
+}
+.del {
+  font-size: 25px !important;
+  padding: 10px 0 !important;
+}
+.equal {
+  padding: 10px 0 !important;
+  font-size: 25px !important;
+  flex: 1;
+}
+.attribution {
+  position: absolute;
+  top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  text-decoration: none;
+}
+.attribution a {
+  text-decoration: none;
+}
+.theme-1 {
+  background-color: var(
+    --Very-dark-desaturated-blue-main-background
+  ) !important;
+}
+.theme-1 form input {
+  background-color: var(
+    --Very-dark-desaturated-blue-screen-background
+  ) !important;
+}
+.theme-1 form div {
+  background-color: var(
+    --Very-dark-desaturated-blue-screen-background
+  ) !important;
+}
+.theme-1 .up button {
+  background-color: var(
+    --Very-dark-desaturated-blue-toggle-background-keypad-background
+  );
+}
+.theme-1 .bottom span {
+  background-color: var(--Light-grayish-orange-key-background);
+  box-shadow: 0 5px var(--Grayish-orange-key-shadow);
+}
+.theme-1 .up button span {
+  background-color: var(--Red-key-background-toggle);
+}
+.theme-1 .reset,
+.theme-1 .del {
+  background-color: var(--Desaturated-dark-blue-key-background) !important;
+  box-shadow: 0 5px var(--Desaturated-dark-blue-key-shadow) !important;
+}
+.theme-1 .attribution {
+  background-color: var(
+    --Very-dark-desaturated-blue-toggle-background-keypad-background
+  );
+}
+.theme-1 .attribution a {
+  color: white;
+}
+.theme-2 .attribution {
+  background: var(--Very-light-gray-screen-background);
+}
+.theme-2 .attribution a {
+  color: var(--Desaturated-dark-blue-key-background);
+}
+.theme-3 .attribution {
+  background: var(--Dark-magenta-key-shadow);
+}
+.theme-3 .attribution a {
+  color: white;
+}
+.theme-1 .equal {
+  background-color: var(--Red-key-background-toggle) !important;
+  box-shadow: 0 5px var(--Dark-red-key-shadow) !important;
+}
+.theme-2 {
+  background-color: var(--Light-gray-main-background);
+}
+.theme-2 form input {
+  background-color: var(--Very-light-gray-screen-background);
+}
+.theme-2 form div {
+  background-color: var(--Grayish-red-toggle-background-keypad-background);
+}
+.theme-2 .up button {
+  background-color: var(--Grayish-red-toggle-background-keypad-background);
+}
+.theme-2 .bottom span {
+  background-color: var(--Light-grayish-orange-key-background);
+  box-shadow: 0 5px var(--Grayish-orange-key-shadow);
+}
+.theme-2 .up button span {
+  background-color: var(--Orange-key-background-toggle);
+}
+.theme-2 .reset,
+.theme-2 .del {
+  background-color: var(--Dark-moderate-cyan-key-background) !important;
+  box-shadow: 0 5px var(--Very-dark-cyan-key-shadow) !important;
+}
+.theme-2 .equal {
+  background-color: var(--Orange-key-background-toggle) !important;
+  box-shadow: 0 5px var(--Dark-red-key-shadow) !important;
+}
+.theme-3 {
+  color: var(--Light-yellow) !important;
+  background-color: var(--Very-dark-violet-main-background);
+}
+.theme-3 form input {
+  background-color: var(
+    --Very-dark-violet-toggle-background-keypad-background-screen-background
+  );
+}
+.theme-3 form div {
+  background-color: var(
+    --Very-dark-violet-toggle-background-keypad-background-screen-background
+  );
+}
+.theme-3 .up button {
+  background-color: var(--Dark-violet-key-background);
+}
+.theme-3 .bottom span {
+  background-color: var(--Very-dark-violet-key-background);
+  box-shadow: 0 5px var(--Dark-magenta-key-shadow);
+}
+.theme-3 .up button span {
+  background-color: var(--Pure-cyan-key-background-toggle);
+}
+.theme-3 .reset,
+.theme-3 .del {
+  color: var(--White) !important;
+  background-color: var(--Dark-violet-key-background) !important;
+  box-shadow: 0 5px var(--Vivid-magenta-key-shadow) !important;
+}
+.theme-3 .equal {
+  background-color: var(--Pure-cyan-key-background-toggle) !important;
+  box-shadow: 0 5px var(--Soft-cyan-key-shadow) !important;
+}
+@media (max-width: 768px) {
+  .bottom form div span:not(.equal) {
+    margin-left: -5px;
+  }
+}

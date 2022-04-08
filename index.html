@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/design/style.css" />
+    <title>Frontend Mentor | Calculator app</title>
+  </head>
+  <body class="theme-1">
+    <div class="calculator">
+      <div class="up">
+        <h3>calc</h3>
+        <div class="themer">
+          <span><span>1</span><span>2</span><span>3</span></span>
+          <button><span></span></button>
+        </div>
+      </div>
+      <div class="middle"></div>
+      <div class="bottom">
+        <form action="" name="calc">
+          <input type="text" name="middle" id="" />
+          <div>
+            <span class="key" onclick="calc.middle.value+='7'">7</span>
+            <span class="key" onclick="calc.middle.value+='8'">8</span>
+            <span class="key" onclick="calc.middle.value+='9'">9</span>
+            <span
+              class="key del"
+              onclick="  calc.middle.value = calc.middle.value.slice(0, -1);
+          "
+              >DEL</span
+            >
+            <span class="key" onclick="calc.middle.value+='6'">6</span>
+            <span class="key" onclick="calc.middle.value+='5'">5</span>
+            <span class="key" onclick="calc.middle.value+='4'">4</span>
+            <span class="key" onclick="calc.middle.value+='+'">+</span>
+            <span class="key" onclick="calc.middle.value+='3'">3</span>
+            <span class="key" onclick="calc.middle.value+='2'">2</span>
+            <span class="key" onclick="calc.middle.value+='1'">1</span>
+            <span class="key" onclick="calc.middle.value+='-'">-</span>
+            <span class="key" onclick="calc.middle.value+='.'">.</span>
+            <span class="key" onclick="calc.middle.value+='0'">0</span>
+            <span class="key" onclick="calc.middle.value+='/'">/</span>
+            <span class="key" onclick="calc.middle.value+='*'">x</span>
+            <span class="key reset" onclick="calc.middle.value=''">Reset</span>
+            <span
+              class="key equal"
+              onclick="calc.middle.value=eval(calc.middle.value)"
+              >=</span
+            >
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="main.js"></script>
+    <div class="attribution">
+      <div>
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >
+      </div>
+      <div>Coded by <a href="#">Karem Obied</a></div>
+    </div>
+  </body>
+</html>
