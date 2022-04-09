@@ -20,15 +20,16 @@ themer.onclick = () => {
 
 let spans = document.querySelectorAll(".bottom span");
 let div = document.querySelector(".middle");
-/* spans.forEach((e) => {
-  e.onclick = () => {
-    if (e.innerHTML === "DEL") {
-      div.innerHTML = div.innerHTML.slice(0, -1);
-    } else if (e.innerHTML === "Reset") {
-      div.innerHTML = "";
-    } else if (e.innerHTML === "=") {
-      div.innerHTML
-    } else div.innerHTML = div.innerHTML + e.innerHTML;
+let a = document.querySelector(".attribution");
+html = a.innerHTML;
+if (window.innerWidth <= 768) {
+  a.innerHTML = "INFO";
+  a.onclick = () => {
+    a.innerHTML = html;
   };
-});
- */
+  a.onmouseleave = () => {
+    a.innerHTML = "INFO";
+  };
+} else {
+  a.innerHTML = html;
+}
